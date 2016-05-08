@@ -1,0 +1,48 @@
+@zindex-message: 1010;
+@message-prefix-cls: rk-message;
+@border-color-base      : #d9d9d9;
+@box-shadow-base        : 0 0 4px rgba(0, 0, 0, 0.17);
+@radio-duration: .2s;
+@ease-in-out-circ    : cubic-bezier(0.78, 0.14, 0.15, 0.86);
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+.@{message-prefix-cls} {
+  font-size: 12px;
+  position: fixed;
+  z-index: @zindex-message;
+  left: 50%;
+  bottom: 15%;
+  width:160%;
+  text-align: center;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  &-notice {
+    width: auto;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+  }
+
+  &-notice-content {
+    position: relative;
+    right: 50%;
+    padding: 8px 16px;
+    border: 1px solid @border-color-base;
+    box-shadow: @box-shadow-base;
+    background:#000;
+    color:#fff;
+    display: block;
+    opacity: 0.3;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+  }
+}

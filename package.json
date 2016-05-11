@@ -1,6 +1,6 @@
 {
   "name": "rk-toast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "仿制 android 的 Toast 效果",
     "main": "./lib/index.js",
   "scripts": {
